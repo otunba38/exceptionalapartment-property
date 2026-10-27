@@ -242,7 +242,7 @@ function searchProperties() {
   const city = document.getElementById("search-city").value.trim();
   const country = document.getElementById("search-country").value.trim();
   const searchStatus = document.getElementById("search-status");
-  const propertyStatus = document.getElementById("property-status");
+  const propertyStatus = document.getElementById("rental-status");
   const container = document.getElementById("property-list");
 
   if (!city && !country) {
@@ -308,7 +308,7 @@ document.getElementById("search-country").addEventListener(
 
 document.getElementById("customer-message-form").addEventListener(
   "submit", async function(event) {
-    event.preventDefault();
+    event.preventDefault()
 
     const form = event.target;
     const button = document.getElementById("customer-send-button");
