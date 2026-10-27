@@ -238,75 +238,52 @@ async function loadProperties() {
   showProperties(allProperties);
 }
 
-function searchProperties() 
- 
+function searchProperties() {
+  const city = document.getElementById("search-city").value.trim();
+  const country = document.getElementById("search-country").value.trim();
+  const searchStatus = document.getElementById("search-status");
+  const propertyStatus = document.getElementById("property-status");
+  const container = document.getElementById("property-list");
 
-card.append(heading, message, contact);
-container.appendChild(card);
+  if (!city && !country) {
+    searchStatus.textContent = "Please enter your preferred city or country.";
+    return;
+  }
 
-document.getElementById("property-status").textContent = "";
-        }
-  const city = document.getElementById("search-city").value.trim().toLowerCase();
-  const country = document.getElementById("search-country").value.trim().toLowerCase();
+  const location = [city, country].filter(Boolean).join(", ");
+  searchStatus.textContent = "";
+  container.replaceChildren();
 
-  const filtered = allProperties.filter(property => {
-    const cityMatch = !city ||
-      (property.city || "").toLowerCase().includes(city);
+  const card = document.createElement("div");
+  card.className = "notice";
 
-    const countryMatch = !country ||
-      (property.country || "").toLowerCase().includes(country);
+  const heading = document.createElement("h2");
+  heading.textContent = "COMING SOON!";
 
-    return cityMatch && countryMatch;
-  });
+  const message = document.createElement("p");
+  message.textContent =
+    "Thank you for your interest in " + location +
+    ". Contact our team for information about rental availability, " +
+    "the application process, and scheduling a property tour.";
 
-  if (filtered.length > 0) {
-document.getElementById("search-status").textContent =
-filtered.length + " rental property/properties found.";
+  const contact = document.createElement("a");
+  contact.className = "button";
+  contact.textContent = "Contact Us for Application & Tour";
+  contact.href =
+    "mailto:exceptionalapartment@outlook.com?subject=" +
+    encodeURIComponent("Rental Inquiry - " + location) +
+    "&body=" + encodeURIComponent(
+      "Hello ExceptionalApartment,\n\n" +
+      "I am interested in rental options in " + location +
+      ". Please provide information about availability, " +
+      "the application process, and scheduling a property tour.\n\n" +
+      "Thank you."
+    );
 
-showProperties(filtered);
-
-} else {
-const city = document.getElementById("search-city").value.trim();
-const country = document.getElementById("search-country").value.trim();
-const location = [city, country].filter(Boolean).join(", ");
-
-document.getElementById("search-status").textContent = "";
-
-const container = document.getElementById("property-list");
-container.replaceChildren();
-
-const card = document.createElement("div");
-card.className = "notice";
-
-const heading = document.createElement("h2");
-heading.textContent = "COMING SOON!";
-
-const message = document.createElement("p");
-message.textContent = location
-  ? "Thank you for your interest in " + location + ". Contact our team to ask about rental availability and the application process."
-  : "Tell us your preferred location, and contact our team for assistance with rental availability.";
-
-const contact = document.createElement("a");
-contact.className = "button";
-contact.textContent = "Contact Us for Application & Tour";
-contact.href = "mailto:exceptionalapartment@outlook.com?subject=" +
-  encodeURIComponent("Rental Application and Property Tour Inquiry" +
-    (location ? " - " + location : "")) +
-  "&body=" + encodeURIComponent(
-    "Hello ExceptionalApartment,\n\n" +
-    "I am interested in finding a rental property" +
-    (location ? " in " + location : "") +
-    ". Please provide information about available rentals, " +
-    "the application process, and scheduling a property tour.\n\n" +
-    "Thank you."
-  );
-
-card.append(heading, message, contact);
-container.appendChild(card);
-
+  card.append(heading, message, contact);
+  container.appendChild(card);
+  propertyStatus.textContent = "";
 }
-}
-
 document.getElementById("search-button").addEventListener(
   "click", searchProperties
 );
