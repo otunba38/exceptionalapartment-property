@@ -252,10 +252,52 @@ function searchProperties() {
     return cityMatch && countryMatch;
   });
 
-  document.getElementById("search-status").textContent =
-    filtered.length + " matching property/properties.";
+  if (filtered.length > 0) {
+document.getElementById("search-status").textContent =
+filtered.length + " rental property/properties found.";
 
-  showProperties(filtered);
+showProperties(filtered);
+
+} else {
+const city = document.getElementById("search-city").value.trim();
+const country = document.getElementById("search-country").value.trim();
+const location = [city, country].filter(Boolean).join(", ");
+
+document.getElementById("search-status").textContent = "";
+
+const container = document.getElementById("property-list");
+container.replaceChildren();
+
+const card = document.createElement("div");
+card.className = "notice";
+
+const heading = document.createElement("h2");
+heading.textContent = "COMING SOON!";
+
+const message = document.createElement("p");
+message.textContent = location
+  ? "Thank you for your interest in " + location + ". Contact our team to ask about rental availability and the application process."
+  : "Tell us your preferred location, and contact our team for assistance with rental availability.";
+
+const contact = document.createElement("a");
+contact.className = "button";
+contact.textContent = "Contact Us for Application & Tour";
+contact.href = "mailto:exceptionalapartment@outlook.com?subject=" +
+  encodeURIComponent("Rental Application and Property Tour Inquiry" +
+    (location ? " - " + location : "")) +
+  "&body=" + encodeURIComponent(
+    "Hello ExceptionalApartment,\n\n" +
+    "I am interested in finding a rental property" +
+    (location ? " in " + location : "") +
+    ". Please provide information about available rentals, " +
+    "the application process, and scheduling a property tour.\n\n" +
+    "Thank you."
+  );
+
+card.append(heading, message, contact);
+container.appendChild(card);
+
+}
 }
 
 document.getElementById("search-button").addEventListener(
