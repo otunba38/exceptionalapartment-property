@@ -87,21 +87,20 @@ footer a{color:white}
 </main>
   <section id="contact-form" style="background:#fff;padding:35px 20px;max-width:700px;margin:25px auto;border-radius:10px;">
   <h2 style="color:#102c46;text-align:center;">Send Us a Message</h2>
-  <p style="text-align:center;">Have a question about a rental? Contact our team.</p>
+  <p style="text-align:center;">Have a question about a rental? Contact our team.</p>  <form id="customer-message-form">
+    <label for="customer-name">Your Name</label><br>
+    <input id="customer-name" type="text" maxlength="100" required style="width:100%;padding:12px;margin:8px 0 15px;"><br><label for="customer-email">Your Email</label><br>
+<input id="customer-email" type="email" maxlength="254" required style="width:100%;padding:12px;margin:8px 0 15px;"><br>
 
-  <form action="mailto:exceptionalapartment@outlook.com" method="post" enctype="text/plain">
-    <label>Your Name</label><br>
-    <input type="text" name="Name" required style="width:100%;padding:12px;margin:8px 0 15px;"><br>
+<label for="customer-message">Your Message</label><br>
+<textarea id="customer-message" rows="5" maxlength="5000" required style="width:100%;padding:12px;margin:8px 0 15px;"></textarea><br>
 
-    <label>Your Email</label><br>
-    <input type="email" name="Email" required style="width:100%;padding:12px;margin:8px 0 15px;"><br>
+<button id="customer-send-button" type="submit" style="background:#D4AF37;color:#102c46;padding:12px 22px;border:0;border-radius:5px;font-weight:bold;">Send Message</button>
 
-    <label>Your Message</label><br>
-    <textarea name="Message" rows="5" required style="width:100%;padding:12px;margin:8px 0 15px;"></textarea><br>
+<p id="customer-form-status" role="status" aria-live="polite"></p>
 
-    <button type="submit" style="background:#D4AF37;color:#102c46;padding:12px 22px;border:0;border-radius:5px;font-weight:bold;">Send Message</button>
   </form>
-  </section>
+</section>
 <footer>
 <p>ExceptionalApartment Property</p>
 <p>Rental information is subject to confirmation and availability.</p>
