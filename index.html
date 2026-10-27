@@ -1,112 +1,140 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ExceptionalApartment Property | Rentals</title>
-<meta name="description" content="Explore rental properties with ExceptionalApartment Property. Contact us by email for availability and details.">
+<title>ExceptionalApartment Property | Find Your Home</title>
+<meta name="description" content="Explore rental properties with ExceptionalApartment Property. Search available homes by location and contact our team.">
+
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;color:#243047;background:#f5f7fa;line-height:1.6}
-header{background:#102c46;color:white;padding:24px 18px;text-align:center}
-header h1{margin:0;font-size:27px}
-header p{margin:7px 0 0;color:#dce7f1}
-nav{background:#173e5e;padding:12px;text-align:center}
-nav a{color:white;text-decoration:none;margin:0 12px;font-weight:bold}
-.hero{padding:45px 20px;text-align:center;background:#e5eef5}
-.hero h2{font-size:30px;margin:0 0 10px}
-.hero p{max-width:620px;margin:0 auto 20px}
-.button{display:inline-block;padding:12px 20px;background:#173e5e;color:white;border-radius:5px;text-decoration:none;font-weight:bold}
-section{padding:28px 18px;max-width:1000px;margin:auto}
-section h2{text-align:center}
+header{background:#102c46;color:white;padding:22px 15px;text-align:center}
+.brand{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.brand h1{margin:0;color:#D4AF37;font-size:26px}
+.brand p{margin:4px 0;color:white;letter-spacing:2px;font-size:12px}
+nav{background:#173e5e;padding:14px;text-align:center}
+nav a{color:white;text-decoration:none;margin:7px 12px;font-weight:bold;display:inline-block}
+.hero{padding:65px 20px;text-align:center;background:linear-gradient(135deg,#102c46,#315b70);color:white}
+.hero h2{font-size:36px;margin:0 0 12px}
+.hero p{max-width:650px;margin:0 auto 24px}
+.button{display:inline-block;padding:12px 20px;background:#D4AF37;color:#102c46;border-radius:5px;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+section{padding:35px 18px;max-width:1100px;margin:auto}
+section h2{text-align:center;color:#102c46}
+.search-box{background:white;padding:20px;border-radius:10px;box-shadow:0 2px 10px #00000010;display:grid;grid-template-columns:1fr 1fr auto;gap:10px}
+input,textarea{width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd5dc;border-radius:5px;font:inherit}
+.search-box input{margin:0}
+.search-box button{padding:12px 18px}
+.property-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.property-card{background:white;border-radius:10px;overflow:hidden;box-shadow:0 3px 12px #00000012}
+.property-card img{width:100%;height:200px;object-fit:cover;background:#e5eef5}
+.property-content{padding:18px}
+.property-content h3{margin:0 0 8px;color:#102c46}
+.rent{font-size:22px;font-weight:bold;color:#173e5e}
 .notice{background:white;border:1px solid #d7e0e8;border-radius:8px;padding:24px;text-align:center}
+#contact-form{background:white;padding:28px;border-radius:10px;max-width:700px}
 footer{background:#102c46;color:white;text-align:center;padding:24px 12px;margin-top:25px}
-footer a{color:white}
+footer p{margin:5px}
+footer a{color:#D4AF37}
+.status{text-align:center;margin:15px 0}
+@media(max-width:650px){
+ .hero h2{font-size:28px}
+ .search-box{grid-template-columns:1fr}
+ .brand h1{font-size:21px}
+}
 </style>
 </head>
-<body>
-<header>
-<header style="background:#102c46;padding:22px 15px;text-align:center;">
-  <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
 
-    <svg width="65" height="65" viewBox="0 0 100 100" role="img" aria-label="House logo">
+<body>
+
+<header>
+  <div class="brand">
+    <svg width="60" height="60" viewBox="0 0 100 100" role="img" aria-label="House logo">
       <path d="M10 45 L50 12 L90 45" fill="none" stroke="#D4AF37" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M20 42 V85 H80 V42" fill="none" stroke="#D4AF37" stroke-width="5" stroke-linejoin="round"/>
       <rect x="40" y="57" width="20" height="28" fill="#D4AF37" rx="2"/>
       <rect x="27" y="50" width="10" height="12" fill="#FFFFFF" rx="1"/>
       <rect x="63" y="50" width="10" height="12" fill="#FFFFFF" rx="1"/>
     </svg>
-
-    <div style="text-align:left;">
-      <h1 style="margin:0;color:#D4AF37;font-size:25px;letter-spacing:1px;">
-        ExceptionalApartment
-      </h1>
-      <p style="margin:4px 0 0;color:#FFFFFF;font-size:14px;letter-spacing:2px;">
-        PRIVATE PROPERTY MANAGEMENT
-      </p>
+    <div>
+      <h1>ExceptionalApartment</h1>
+      <p>PRIVATE PROPERTY MANAGEMENT</p>
     </div>
-
   </div>
 </header>
-<nav style="background:#173e5e;padding:15px;text-align:center;">
-  <a href="#home" style="color:white;text-decoration:none;margin:8px;">Home</a>
-  <a href="#rentals" style="color:white;text-decoration:none;margin:8px;">Rentals</a>
-  <a href="#about" style="color:white;text-decoration:none;margin:8px;">About Us</a>
-  <a href="#contact" style="color:white;text-decoration:none;margin:8px;">Contact</a>
-  <a href="#contact" style="display:inline-block;background:#D4AF37;color:#102c46;text-decoration:none;padding:9px 15px;border-radius:5px;font-weight:bold;margin:5px;">Message Us</a>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#rentals">Rentals</a>
+  <a href="#about">About Us</a>
+  <a href="#contact-form">Contact</a>
 </nav>
+
 <main>
-<div class="hero" id="home">
-<h2>Find a Place to Call Home</h2>
-<p>Explore rental opportunities in different locations. Contact our team by email to ask about available properties, rental terms, and viewing arrangements.</p>
-<a class="button" href="#rentals">Explore Rentals</a>
-</div>
-  <section id="about" style="background:#ffffff;padding:35px 20px;text-align:center;">
-  <h2 style="color:#102c46;">About ExceptionalApartment Property</h2>
-  <p style="max-width:750px;margin:0 auto;color:#444;">
-    ExceptionalApartment Property is dedicated to helping people find a place
-    they can call home. We focus on clear communication, quality rental options,
-    and professional property management. Our goal is to make your home search
-    simple, comfortable, and straightforward.
-  </p>
+  <div class="hero" id="home">
+    <h2>Find a Place to Call Home</h2>
+    <p>Explore rental opportunities in different locations. Discover available properties and contact our team for more information.</p>
+    <a class="button" href="#rentals">Explore Rentals</a>
+  </div>
+
+  <section id="search">
+    <h2>Find Your Next Home</h2>
+    <div class="search-box">
+      <input id="search-city" type="search" placeholder="Enter city or area">
+      <input id="search-country" type="search" placeholder="Enter country">
+      <button class="button" id="search-button" type="button">Search</button>
+    </div>
+    <p class="status" id="search-status" aria-live="polite"></p>
   </section>
-<section id="rentals">
-<h2>Rental Properties</h2>
-<div class="notice">
-<h3>Find Your Next Home</h3>
-<p>Explore rental opportunities with ExceptionalApartment Property. Contact our team for information about available properties, rental terms, and viewing arrangements.</p>
-<a class="button" href="mailto:exceptionalapartment@outlook.com?subject=Rental%20Availability%20Inquiry">Inquire About Rentals</a>
-</div>
-</section>
-<section id="contact">
-<h2>Contact Us</h2>
-<div class="notice">
-<p>For rental availability and property information, contact us by email.</p>
-<p><a href="mailto:exceptionalapartment@outlook.com">exceptionalapartment@outlook.com</a></p>
-</div>
-</section>
+
+  <section id="rentals">
+    <h2>Available Rental Properties</h2>
+    <p class="status" id="property-status" aria-live="polite">Loading available properties...</p>
+    <div class="property-grid" id="property-list"></div>
+  </section>
+
+  <section id="about">
+    <div class="notice">
+      <h2>About ExceptionalApartment Property</h2>
+      <p>ExceptionalApartment Property is dedicated to helping people find a place they can call home. We focus on clear communication, quality rental options, and professional property management. Our goal is to make your home search simple, comfortable, and straightforward.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="notice">
+      <h2>Have Questions About a Rental?</h2>
+      <p>Send our team a message using the form below. We'll review your enquiry and respond by email.</p>
+      <p><a href="#contact-form" class="button">Contact Our Team</a></p>
+    </div>
+  </section>
+
+  <section id="contact-form">
+    <h2>Send Us a Message</h2>
+    <p style="text-align:center">Have a question about a rental? Contact our team.</p>
+
+    <form id="customer-message-form">
+      <label for="customer-name">Your Name</label>
+      <input id="customer-name" type="text" maxlength="100" required>
+
+      <label for="customer-email">Your Email</label>
+      <input id="customer-email" type="email" maxlength="254" required>
+
+      <label for="customer-message">Your Message</label>
+      <textarea id="customer-message" rows="5" maxlength="5000" required></textarea>
+
+      <button id="customer-send-button" class="button" type="submit">Send Message</button>
+      <p id="customer-form-status" class="status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
 </main>
-  <section id="contact-form" style="background:#fff;padding:35px 20px;max-width:700px;margin:25px auto;border-radius:10px;">
-  <h2 style="color:#102c46;text-align:center;">Send Us a Message</h2>
-  <p style="text-align:center;">Have a question about a rental? Contact our team.</p>  <form id="customer-message-form">
-    <label for="customer-name">Your Name</label><br>
-    <input id="customer-name" type="text" maxlength="100" required style="width:100%;padding:12px;margin:8px 0 15px;"><br><label for="customer-email">Your Email</label><br>
-<input id="customer-email" type="email" maxlength="254" required style="width:100%;padding:12px;margin:8px 0 15px;"><br>
 
-<label for="customer-message">Your Message</label><br>
-<textarea id="customer-message" rows="5" maxlength="5000" required style="width:100%;padding:12px;margin:8px 0 15px;"></textarea><br>
-
-<button id="customer-send-button" type="submit" style="background:#D4AF37;color:#102c46;padding:12px 22px;border:0;border-radius:5px;font-weight:bold;">Send Message</button>
-
-<p id="customer-form-status" role="status" aria-live="polite"></p>
-
-  </form>
-</section>
 <footer>
-<p>ExceptionalApartment Property</p>
-<p>Rental information is subject to confirmation and availability.</p>
-<p>&copy; 2026 ExceptionalApartment Property</p>
+  <p><strong>ExceptionalApartment Property</strong></p>
+  <p>Rental information is subject to confirmation and availability.</p>
+  <p><a href="mailto:exceptionalapartment@outlook.com">exceptionalapartment@outlook.com</a></p>
+  <p>&copy; 2026 ExceptionalApartment Property</p>
 </footer>
-  <!-- Supabase connection -->
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
@@ -117,91 +145,176 @@ const supabaseClient = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
-</script>
-  <script>
-document.getElementById("customer-message-form").addEventListener("submit", async function(event) {
-  event.preventDefault();
 
-  const form = event.target;
-  const button = document.getElementById("customer-send-button");
-  const status = document.getElementById("customer-form-status");
+let allProperties = [];
 
-  button.disabled = true;
-  status.textContent = "Sending your message...";
+function showProperties(properties) {
+  const container = document.getElementById("property-list");
+  container.replaceChildren();
 
-  try {
-    const { error } = await supabaseClient
-      .from("customer_messages")
-      .insert({
-        name: document.getElementById("customer-name").value.trim(),
-        email: document.getElementById("customer-email").value.trim(),
-        message: document.getElementById("customer-message").value.trim()
-      });
+  const status = document.getElementById("property-status");
 
-    if (error) throw error;
-
-    status.textContent = "Thank you! Your message has been sent.";
-    form.reset();
-  } catch (error) {
-    console.error("Message submission failed:", error);
-    status.textContent = "Sorry, your message could not be sent. Please try again.";
-  } finally {
-    button.disabled = false;
+  if (!properties.length) {
+    status.textContent = allProperties.length
+      ? "No properties match your search. Try another location."
+      : "No available rental properties are listed at the moment.";
+    return;
   }
-});
-  </script>
 
-    
+  status.textContent = properties.length + " rental property/properties found.";
 
+  properties.forEach(property => {
+    const card = document.createElement("article");
+    card.className = "property-card";
 
-
-    
-      
-    </button>
-    <p id="login-message" role="status"></p>
-  </form>
-</section>
-
-<script>
-document.getElementById("login-form").addEventListener("submit", async function(event) {
-  event.preventDefault();
-
-  const message = document.getElementById("login-message");
-  const button = event.target.querySelector('button[type="submit"]');
-
-  message.textContent = "Logging in...";
-  button.disabled = true;
-
-  let timeoutId;
-
-  try {
-    const email = document.getElementById("admin-email").value.trim();
-    const password = document.getElementById("admin-password").value;
-
-    const loginRequest = supabaseClient.auth.signInWithPassword({
-      email: email,
-      password: password
-    });
-
-    const timeout = new Promise((_, reject) => {
-      timeoutId = setTimeout(() => {
-        reject(new Error("Login timed out. Please check your internet connection and try again."));
-      }, 15000);
-    });
-
-    const { data, error } = await Promise.race([loginRequest, timeout]);
-
-    if (error) {
-      message.textContent = "Login failed. Check your email and password.";
-      return;
+    if (property.image_url) {
+      const image = document.createElement("img");
+      image.src = property.image_url;
+      image.alt = property.title;
+      image.loading = "lazy";
+      image.onerror = () => {
+        image.remove();
+      };
+      card.appendChild(image);
     }
 
-    message.textContent = "Login successful!";
-  } catch (error) {
-    message.textContent = error.message || "Unable to log in. Please try again.";
-  } finally {
-    clearTimeout(timeoutId);
-    button.disabled = false;} });
+    const content = document.createElement("div");
+    content.className = "property-content";
+
+    const title = document.createElement("h3");
+    title.textContent = property.title;
+
+    const location = document.createElement("p");
+    location.textContent = property.city + ", " + property.country;
+
+    const rent = document.createElement("p");
+    rent.className = "rent";
+    rent.textContent = Number(property.rent).toLocaleString(
+      undefined,
+      { maximumFractionDigits: 2 }
+    ) + " / month";
+
+    const beds = document.createElement("p");
+    beds.textContent = "Bedrooms: " + property.bedrooms +
+      " | Bathrooms: " + property.bathrooms;
+
+    const description = document.createElement("p");
+    description.textContent = property.description;
+
+    const inquiry = document.createElement("a");
+    inquiry.className = "button";
+    inquiry.textContent = "Enquire About This Property";
+    inquiry.href = "mailto:exceptionalapartment@outlook.com?subject=" +
+      encodeURIComponent("Rental enquiry: " + property.title) +
+      "&body=" + encodeURIComponent(
+        "Hello ExceptionalApartment,\n\nI am interested in " +
+        property.title + " in " + property.city + ", " +
+        property.country + ". Please provide more information.\n\nThank you."
+      );
+
+    content.append(title, location, rent, beds, description, inquiry);
+    card.appendChild(content);
+    container.appendChild(card);
+  });
+}
+
+async function loadProperties() {
+  const status = document.getElementById("property-status");
+  status.textContent = "Loading available properties...";
+
+  const { data, error } = await supabaseClient
+    .from("properties")
+    .select("id,title,country,city,rent,bedrooms,bathrooms,description,image_url,available,created_at")
+    .eq("available", true)
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error("Could not load properties:", error);
+    status.textContent = "We couldn't load properties right now. Please try again later.";
+    return;
+  }
+
+  allProperties = data || [];
+  showProperties(allProperties);
+}
+
+function searchProperties() {
+  const city = document.getElementById("search-city").value.trim().toLowerCase();
+  const country = document.getElementById("search-country").value.trim().toLowerCase();
+
+  const filtered = allProperties.filter(property => {
+    const cityMatch = !city ||
+      (property.city || "").toLowerCase().includes(city);
+
+    const countryMatch = !country ||
+      (property.country || "").toLowerCase().includes(country);
+
+    return cityMatch && countryMatch;
+  });
+
+  document.getElementById("search-status").textContent =
+    filtered.length + " matching property/properties.";
+
+  showProperties(filtered);
+}
+
+document.getElementById("search-button").addEventListener(
+  "click", searchProperties
+);
+
+document.getElementById("search-city").addEventListener(
+  "keydown", event => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      searchProperties();
+    }
+  }
+);
+
+document.getElementById("search-country").addEventListener(
+  "keydown", event => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      searchProperties();
+    }
+  }
+);
+
+document.getElementById("customer-message-form").addEventListener(
+  "submit", async function(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const button = document.getElementById("customer-send-button");
+    const status = document.getElementById("customer-form-status");
+
+    button.disabled = true;
+    status.textContent = "Sending your message...";
+
+    try {
+      const { error } = await supabaseClient
+        .from("customer_messages")
+        .insert({
+          name: document.getElementById("customer-name").value.trim(),
+          email: document.getElementById("customer-email").value.trim(),
+          message: document.getElementById("customer-message").value.trim()
+        });
+
+      if (error) throw error;
+
+      status.textContent = "Thank you! Your message has been sent.";
+      form.reset();
+    } catch (error) {
+      console.error("Message submission failed:", error);
+      status.textContent = "Sorry, your message could not be sent. Please try again.";
+    } finally {
+      button.disabled = false;
+    }
+  }
+);
+
+loadProperties();
 </script>
+
 </body>
 </html>
