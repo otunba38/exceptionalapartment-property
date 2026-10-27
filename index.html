@@ -154,12 +154,12 @@ function showProperties(properties) {
 
   const status = document.getElementById("property-status");
 
-  if (!properties.length) {
-    status.textContent = allProperties.length
-      ? "No properties match your search. Try another location."
-      : "No available rental properties are listed at the moment.";
-    return;
-  }
+ if (!properties.length) {
+status.innerHTML = allProperties.length
+? "No properties match your search. Try another location or <a href='#contact'>contact us</a> for assistance."
+: "Looking for a rental in your preferred location? <a href='#contact'>Contact us</a> to ask about availability and properties in other areas.";
+return;
+ }
 
   status.textContent = properties.length + " rental property/properties found.";
 
