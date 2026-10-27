@@ -118,7 +118,38 @@ const supabaseClient = window.supabase.createClient(
   SUPABASE_KEY
 );
 </script>
-  
+  <script>
+document.getElementById("customer-message-form").addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const button = document.getElementById("customer-send-button");
+  const status = document.getElementById("customer-form-status");
+
+  button.disabled = true;
+  status.textContent = "Sending your message...";
+
+  try {
+    const { error } = await supabaseClient
+      .from("customer_messages")
+      .insert({
+        name: document.getElementById("customer-name").value.trim(),
+        email: document.getElementById("customer-email").value.trim(),
+        message: document.getElementById("customer-message").value.trim()
+      });
+
+    if (error) throw error;
+
+    status.textContent = "Thank you! Your message has been sent.";
+    form.reset();
+  } catch (error) {
+    console.error("Message submission failed:", error);
+    status.textContent = "Sorry, your message could not be sent. Please try again.";
+  } finally {
+    button.disabled = false;
+  }
+});
+  </script>
 
     
 
