@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore rental property enquiries with ExceptionalApartment Property. Browse listings by location and contact us by email.">
+<title>ExceptionalApartment Property | Rental Listings</title>
+<style>
+  :root {
+    --navy: #14263d;
+    --navy-2: #203a58;
+    --gold: #c9a96a;
+    --cream: #f7f5f0;
+    --ink: #202a35;
+    --muted: #66717d;
+    --line: #e3e6e8;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--white); line-height: 1.6; }
+  a { color: inherit; }
+  .topbar { background: var(--navy); color: #fff; padding: 10px 5vw; font-size: 13px; text-align: center; letter-spacing: .2px; }
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+  .nav { max-width: 1180px; margin: auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+  .mark { width: 42px; height: 42px; border: 2px solid var(--gold); border-radius: 10px 10px 10px 2px; display: grid; place-items: center; color: var(--navy); font-weight: 800; font-size: 18px; flex: 0 0 auto; }
+  .brand-name { color: var(--navy); font-size: 17px; font-weight: 800; line-height: 1.2; }
+  .brand-sub { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 1.7px; margin-top: 4px; }
+  nav { display: flex; gap: 24px; align-items: center; }
+  nav a { text-decoration: none; color: #394553; font-size: 14px; font-weight: 600; }
+  nav a:hover { color: #9a783d; }
+  .nav-cta, .button { display: inline-block; background: var(--navy); color: white; text-decoration: none; border-radius: 5px; padding: 12px 18px; font-size: 14px; font-weight: 700; border: 1px solid var(--navy); }
+  .nav-cta:hover, .button:hover { background: var(--navy-2); }
+  .hero { background: linear-gradient(105deg, rgba(16,35,56,.94), rgba(16,35,56,.73)), linear-gradient(135deg, #a8b5c0, #e8e1d4); color: white; padding: 88px 24px 82px; }
+  .hero-inner { max-width: 1120px; margin: auto; }
+  .eyebrow { color: #e4c88f; text-transform: uppercase; letter-spacing: 2.5px; font-size: 12px; font-weight: 800; }
+  h1 { font-size: clamp(36px, 5.5vw, 62px); line-height: 1.08; letter-spacing: -1.7px; max-width: 760px; margin: 18px 0; }
+  .hero p { max-width: 640px; color: #edf1f4; font-size: 17px; margin: 0 0 28px; }
+  .hero .button { background: var(--gold); border-color: var(--gold); color: #1c2c3e; }
+  .hero .button:hover { background: #d8bb82; }
+  .trustline { display: flex; flex-wrap: wrap; gap: 18px 28px; margin-top: 34px; color: #e2e7eb; font-size: 13px; }
+  .trustline span::before { content: "✓"; color: #e4c88f; font-weight: bold; margin-right: 8px; }
+  section { padding: 68px 24px; }
+  .container { max-width: 1120px; margin: auto; }
+  .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+  .section-head h2, .about h2, .contact h2 { color: var(--navy); font-size: clamp(27px, 3vw, 38px); letter-spacing: -.7px; line-height: 1.2; margin: 8px 0 10px; }
+  .section-head p { margin: 0; color: var(--muted); max-width: 600px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 30px; }
+  .filter { background: #fff; border: 1px solid #d9dee3; padding: 9px 15px; border-radius: 999px; font-size: 13px; font-weight: 700; color: #344355; }
+  .filter.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .card { border: 1px solid var(--line); border-radius: 9px; overflow: hidden; background: #fff; }
+  .card-art { min-height: 180px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e9e7e0, #c9d2d8); color: #596b7a; font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+  .card:nth-child(2) .card-art { background: linear-gradient(135deg, #e6ded2, #b9c5c3); }
+  .card:nth-child(3) .card-art { background: linear-gradient(135deg, #d9e0e3, #b7c0cd); }
+  .card-body { padding: 21px; }
+  .badge { display: inline-block; border-radius: 4px; padding: 5px 8px; background: #f5efe3; color: #80642f; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .card h3 { color: var(--navy); font-size: 19px; margin: 13px 0 7px; }
+  .card p { color: var(--muted); font-size: 14px; margin: 0 0 15px; }
+  .card-foot { border-top: 1px solid var(--line); padding-top: 13px; display: flex; justify-content: space-between; gap: 10px; align-items: center; font-size: 12px; color: var(--muted); }
+  .card-foot a { color: var(--navy); font-weight: 800; text-decoration: none; }
+  .notice { background: var(--cream); border-left: 3px solid var(--gold); padding: 14px 17px; color: #5f6670; font-size: 13px; margin-top: 24px; }
+  .about-wrap { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; align-items: center; }
+  .about p { color: #5f6973; }
+  .benefits { display: grid; gap: 15px; }
+  .benefit { display: flex; gap: 14px; padding: 16px; border: 1px solid #e4e2dc; border-radius: 8px; background: #fff; }
+  .benefit-icon { width: 36px; height: 36px; border-radius: 8px; display: grid; place-items: center; background: #f4ead6; color: #87672f; font-weight: 800; flex: 0 0 auto; }
+  .benefit strong { display: block; color: var(--navy); margin-bottom: 3px; }
+  .benefit small { color: var(--muted); font-size: 13px; }
+  .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; }
+  .contact p { color: var(--muted); }
+  .email-box { background: var(--cream); border-radius: 9px; padding: 26px; }
+  label { display: block; color: #344355; font-size: 13px; font-weight: 700; margin: 0 0 6px; }
+  input, select, textarea { width: 100%; border: 1px solid #d6dce1; border-radius: 5px; padding: 12px; font: inherit; font-size: 14px; background: white; margin-bottom: 16px; }
+  textarea { min-height: 110px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid #c9a96a; outline-offset: 1px; }
+  .email-link { display: inline-block; color: var(--navy); font-weight: 800; overflow-wrap: anywhere; }
+  .smallprint { font-size: 12px; color: #707a84; }
+  footer { background: var(--navy); color: #e9edf0; padding: 28px 24px; }
+  .footer-inner { max-width: 1120px; margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 12px; }
+  footer a { color: #e4c88f; text-decoration: none; }
+  @media (max-width: 820px) {
+    nav { gap: 12px; } nav a:not(.nav-cta) { display: none; }
+    .cards { grid-template-columns: 1fr 1fr; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+    .section-head { display: block; }
+  }
+  @media (max-width: 560px) {
+    .nav { padding: 13px 16px; } .brand-name { font-size: 15px; } .brand-sub { letter-spacing: 1px; }
+    .nav-cta { padding: 10px 12px; font-size: 12px; }
+    .hero { padding: 65px 20px; } section { padding: 52px 18px; }
+    .cards { grid-template-columns: 1fr; }
+    .card-art { min-height: 155px; }
+    .trustline { display: grid; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">Rental enquiries across Jersey, the UK, the USA and other international locations</div>
+<header>
+  <div class="nav">
+    <a class="brand" href="#home" aria-label="ExceptionalApartment Property home">
+      <span class="mark">EA</span>
+      <span><span class="brand-name">ExceptionalApartment Property</span><span class="brand-sub">Property enquiries & rentals</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#properties">Properties</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#contact">Make an enquiry</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="eyebrow">Find your next place to call home</div>
+      <h1>Property searches, made clearer.</h1>
+      <p>Explore rental opportunities in Jersey, across the United Kingdom, the United States and other locations. Review each listing's details and contact us by email with your questions.</p>
+      <a class="button" href="#properties">Explore property listings</a>
+      <div class="trustline">
+        <span>International property enquiries</span>
+        <span>Listing details in one place</span>
+        <span>Email-only contact</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="properties">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" style="color:#9a783d">Explore listings</div>
+          <h2>Available properties</h2>
+          <p>Use the location categories to organise your search. Add verified property details and photos before publishing a listing as available.</p>
+        </div>
+      </div>
+      <div class="filters" aria-label="Property location categories">
+        <button class="filter active" type="button" data-region="all">All locations</button>
+        <button class="filter" type="button" data-region="jersey">Jersey</button>
+        <button class="filter" type="button" data-region="uk">United Kingdom</button>
+        <button class="filter" type="button" data-region="usa">United States</button>
+        <button class="filter" type="button" data-region="other">Other countries</button>
+      </div>
+      <div class="cards">
+        <article class="card" data-region="jersey">
+          <div class="card-art">Property photo to be added</div>
+          <div class="card-body">
+            <span class="badge">Jersey</span>
+            <h3>Jersey rental listing</h3>
+            <p>Add the verified property address, rent, number of bedrooms and bathrooms, amenities, availability date and genuine photos here.</p>
+            <div class="card-foot"><span>Details to be confirmed</span><a href="#contact" data-listing="Jersey rental listing">Enquire by email →</a></div>
+          </div>
+        </article>
+        <article class="card" data-region="uk">
+          <div class="card-art">Property photo to be added</div>
+          <div class="card-body">
+            <span class="badge">United Kingdom</span>
+            <h3>UK rental listing</h3>
+            <p>Add the verified property address, rent, number of bedrooms and bathrooms, amenities, availability date and genuine photos here.</p>
+            <div class="card-foot"><span>Details to be confirmed</span><a href="#contact" data-listing="UK rental listing">Enquire by email →</a></div>
+          </div>
+        </article>
+        <article class="card" data-region="usa">
+          <div class="card-art">Property photo to be added</div>
+          <div class="card-body">
+            <span class="badge">United States</span>
+            <h3>USA rental listing</h3>
+            <p>Add the verified property address, rent, number of bedrooms and bathrooms, amenities, availability date and genuine photos here.</p>
+            <div class="card-foot"><span>Details to be confirmed</span><a href="#contact" data-listing="USA rental listing">Enquire by email →</a></div>
+          </div>
+        </article>
+      </div>
+      <div class="notice"><strong>Listing note:</strong> These are editable placeholders, not confirmed available properties. Replace them with accurate listings and authorised photos before sharing the website with prospective tenants.</div>
+    </div>
+  </section>
+
+  <div class="about-wrap" id="about">
+    <section class="container about">
+      <div class="about-grid">
+        <div>
+          <div class="eyebrow" style="color:#9a783d">About us</div>
+          <h2>Clear information. Direct enquiries.</h2>
+          <p>ExceptionalApartment Property provides an online place to present rental listings and receive enquiries from people searching for a home in different locations.</p>
+          <p>Each property listing should include accurate details, rental terms, location and availability information so prospective tenants can decide whether to enquire.</p>
+          <a class="button" href="#contact">Contact us by email</a>
+        </div>
+        <div class="benefits">
+          <div class="benefit"><span class="benefit-icon">01</span><div><strong>Listing information</strong><small>Property details, rent, amenities and location can be displayed together.</small></div></div>
+          <div class="benefit"><span class="benefit-icon">02</span><div><strong>International reach</strong><small>Organise listings from Jersey, the UK, the USA and other countries.</small></div></div>
+          <div class="benefit"><span class="benefit-icon">03</span><div><strong>Email contact only</strong><small>Visitors can contact the business without a public phone number or office address.</small></div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="eyebrow" style="color:#9a783d">Get in touch</div>
+          <h2>Enquire about a property</h2>
+          <p>Tell us which listing you are interested in, where you want to live and your preferred move-in date. We will receive your message through your email application.</p>
+          <p><strong>Email</strong><br><a class="email-link" href="mailto:exceptionalapartment@outlook.com">exceptionalapartment@outlook.com</a></p>
+          <p class="smallprint">For your safety, verify the property, viewing arrangements, landlord or agent, and payment instructions independently before sending money or sensitive documents.</p>
+        </div>
+        <form class="email-box" id="enquiry-form">
+          <label for="name">Your name</label>
+          <input id="name" name="name" autocomplete="name" required placeholder="Enter your name">
+          <label for="email">Your email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          <label for="region">Preferred location</label>
+          <select id="region" name="region" required>
+            <option value="">Choose a location</option>
+            <option>Jersey, Channel Islands</option>
+            <option>United Kingdom</option>
+            <option>United States</option>
+            <option>Other country</option>
+          </select>
+          <label for="listing">Property or listing address</label>
+          <input id="listing" name="listing" placeholder="Enter the listing name or address">
+          <label for="message">Your enquiry</label>
+          <textarea id="message" name="message" required placeholder="Tell us about your requirements and preferred move-in date."></textarea>
+          <button class="button" type="submit">Prepare email enquiry</button>
+          <p class="smallprint">This form opens your device's email app; it does not send or store information on this website.</p>
+          <p id="form-status" class="smallprint" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div><strong>ExceptionalApartment Property</strong><br>Property enquiries & rental listings</div>
+    <div>Contact: <a href="mailto:exceptionalapartment@outlook.com">exceptionalapartment@outlook.com</a></div>
+    <div>© <span id="year"></span> ExceptionalApartment Property</div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const filters = document.querySelectorAll('.filter');
+  const cards = document.querySelectorAll('.card');
+  filters.forEach(button => {
+    button.addEventListener('click', () => {
+      filters.forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
+      const region = button.dataset.region;
+      cards.forEach(card => {
+        card.hidden = region !== 'all' && card.dataset.region !== region;
+      });
+    });
+  });
+
+  document.querySelectorAll('[data-listing]').forEach(link => {
+    link.addEventListener('click', () => {
+      const listingInput = document.getElementById('listing');
+      listingInput.value = link.dataset.listing;
+    });
+  });
+
+  document.getElementById('enquiry-form').addEventListener('submit', event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const name = form.name.value.trim();
+    const sender = form.email.value.trim();
+    const region = form.region.value;
+    const listing = form.listing.value.trim() || 'Not specified';
+    const message = form.message.value.trim();
+    const subject = encodeURIComponent('Property enquiry — ' + listing);
+    const body = encodeURIComponent(
+      'Name: ' + name + '\nEmail: ' + sender + '\nPreferred location: ' + region +
+      '\nProperty/listing: ' + listing + '\n\nEnquiry:\n' + message
+    );
+    document.getElementById('form-status').textContent = 'Opening your email app to prepare the enquiry…';
+    window.location.href = 'mailto:exceptionalapartment@outlook.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+</body>
+</html>
