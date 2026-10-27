@@ -238,49 +238,8 @@ async function loadProperties() {
   showProperties(allProperties);
 }
 
-function searchProperties() {
-const city = document.getElementById("search-city").value.trim();
-const country = document.getElementById("search-country").value.trim();
-
-if (!city && !country) {
-document.getElementById("search-status").textContent =
-"Please enter your preferred city or country.";
-return;
-}
-
-document.getElementById("search-status").textContent = "";
-
-const container = document.getElementById("property-list");
-container.replaceChildren();
-
-const card = document.createElement("div");
-card.className = "notice";
-
-const heading = document.createElement("h2");
-heading.textContent = "COMING SOON!";
-
-const location = [city, country].filter(Boolean).join(", ");
-
-const message = document.createElement("p");
-message.textContent =
-"Thank you for your interest in " + location +
-". Contact our team for information about rental availability, " +
-"the application process, and scheduling a property tour.";
-
-const contact = document.createElement("a");
-contact.className = "button";
-contact.textContent = "Contact Us for Application & Tour";
-contact.href =
-"mailto:exceptionalapartment@outlook.com?subject=" +
-encodeURIComponent("Rental Inquiry - " + location) +
-"&body=" +
-encodeURIComponent(
-"Hello ExceptionalApartment,\n\n" +
-"I am interested in rental options in " + location +
-". Please provide information about availability, " +
-"the application process, and scheduling a property tour.\n\n" +
-"Thank you."
-);
+function searchProperties() 
+ 
 
 card.append(heading, message, contact);
 container.appendChild(card);
