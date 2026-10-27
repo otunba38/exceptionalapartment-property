@@ -258,16 +258,25 @@ function searchProperties() {
   card.className = "notice";
 
   const heading = document.createElement("h2");
-  heading.textContent = "COMING SOON!";
+heading.textContent = "🏡 COMING SOON!";
+heading.style.fontSize = "28px";
+heading.style.fontWeight = "800";
+heading.style.marginBottom = "16px";
 
   const message = document.createElement("p");
-  message.textContent =
-    "Thank you for your interest in " + location +
-    ". Contact our team for information about rental availability, " +
-    "the application process, and scheduling a property tour.";
+message.textContent =
+  "Thank you for your interest in " + location + "! " +
+  "We're preparing future rental opportunities for this area. " +
+  "Contact our team for updates on rental availability, " +
+  "application requirements, and property tours.";
+message.style.fontSize = "16px";
+message.style.lineHeight = "1.7";
 
   const contact = document.createElement("a");
   contact.className = "button";
+ contact.style.display = "inline-block";
+contact.style.marginTop = "12px";
+contact.style.padding = "12px 20px";
   contact.textContent = "Contact Us for Application & Tour";
   contact.href =
     "mailto:exceptionalapartment@outlook.com?subject=" +
